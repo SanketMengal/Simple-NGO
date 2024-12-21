@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+{% block x %}
+<div class="fs-2 text-center">Blog<b class="txt">Details
+    <i class="fa-solid fa-blog"></i></b></div>
+ <div class="row">
+   <div class="col-sm-2"></div>
+   <div class="col-sm-8">
+        {% for x in data %}
+            <div class="col-sm-3">
+                <div class="card">
+<img src="/{{x.bpic}}" class="img-card-top">
+                    <div class="card-body">
+                        <h5 class="card-title">{{x.bname}}</h5>
+                        <p>{{x.bdes}}</p>
+                        <span class="btn btn-sm bg-mycolor"><i class="fa-solid fa-calendar-days"></i>{{x.bdate}}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+   </div>
+   <div class="col-sm-2"></div>
+
+{% endblock %}</div>}

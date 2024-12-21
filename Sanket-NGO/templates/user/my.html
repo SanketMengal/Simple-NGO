@@ -1,0 +1,48 @@
+{% extends 'base.html'%}
+{% load static %}
+         {% block title %}
+myProfile
+        {% endblock %}
+
+{% block x %}
+<div class="fs-2 text-center">My <b class="txt">Profile
+      <i class="fa-solid fa-phone fa-user"></i></i></b>
+</div><br>
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <div class="card sh mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static 'images/rjt.jpg'%}" class="img-fluid rounded-start" style="min-height: 110px;" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+                <hr width="100%" style="color:red;">
+              <p class="card-text"> Hello ! My name is :- <b class="txt">Rajat yadav</b><br><br>
+              I am from Unnao . I am pursuing my second year <b class="txt">Computer Science and Engineering</b><br>  from
+                  <b class="txt"><i class="fa-solid fa-building-columns"></i> Government Polytechnic Unnao</b>.
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                                  <hr width="100%" style="color:red;">
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+{% endblock %}

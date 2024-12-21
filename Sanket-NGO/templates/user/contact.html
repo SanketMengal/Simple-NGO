@@ -1,0 +1,72 @@
+{% extends 'base.html'%}
+        {% block title %}
+contactUs
+        {% endblock %}
+
+{% block x %}
+<div class="fs-2 text-center">Contact <b class="txt">Us
+      <i class="fa-solid fa-phone fa-bounce"></i></i></b>
+</div>
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+        {% if m %}
+        <div class="alert alert-success">YOUR MESSAGE SENT SUCCESSFULLY</div>
+        {% endif %}
+        <form method="post">
+            {% csrf_token %}
+            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light ">
+                    <i class="fa-solid fa-user"></i></i>
+                <input name="name" type="text" class="form-control " placeholder="name..."/>
+            </div>
+            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light ">
+                    <i class="fa-solid fa-envelope"></i></i>
+                <input name="email" type="" class="form-control " placeholder="email..."/>
+            </div>
+            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light ">
+                    <i class="fa-solid fa-phone"></i></i>
+                <input name="mob" type="text" class="form-control " placeholder="mob no..."/>
+            </div>
+            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light ">
+                    <i class="fa-solid fa-message"></i></i>
+                <textarea name="msg" class="form-control" placeholder="message..."></textarea>
+            </div>
+   <br> <input type="submit" value="Save" class="form-control bg-mycolor text-light  ">
+        </form>
+<!--        <div class="alert alert-success">-->
+<!--            Name is : {{Name}}<br>-->
+<!--            Email is : {{Email}}<br>-->
+<!--            Mobile is : {{Mobile}}<br>-->
+<!--            Message is : {{Message}}<br>-->
+<!--        </div>-->
+    </div><br>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4 bb pt-3 ps-3 ">
+<u><h5>Contact Info</h5></u>
+       <h6 class="text-danger"> <i class="fa-sharp fa-solid fa-location-dot"></i>&nbsp;&nbsp;<u>Office </u> Address</h6>
+<p class="ps-5">JP4P+8Q4 Laxmi chowk, Vinayak Colony, Kirti Classic Rd, Phase 1, Hinjawadi Rajiv Gandhi Infotech Park, Hinjawadi, Pimpri-Chinchwad, Maharashtra 411057<br>
+        <h6 class="text-danger"><i class=" fa-solid fa-phone"></i>&nbsp;&nbsp;<u>Call</u>  Us </h6>
+        <p class="ps-5">+91 9665797435</p>
+      <h6 class="text-danger"><i class=" fa-solid fa-message"></i>&nbsp;&nbsp;<u>Mail</u>  Us </h6>
+        <p class="ps-5">mengalsanket1@gmail.com</p>
+    </div>
+    <div class="col-sm-1"></div></div>
+<div class="row">
+    <div class="col-sm-12" style="height:15px;"></div>
+</div>
+    <div class="row bb text-center" style="border:2px solid #1f766c;">
+        <p class="fs-1">Find us on <b class="txt">Google Map</b><p>
+        View us on google map easily
+         <a href="https://www.google.com/maps/place/Trimurti+residency/@18.6057513,73.7343567,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2bb1de8b48ff3:0xeef74d3d7735b1f3!8m2!3d18.6057513!4d73.7369316!16s%2Fg%2F11qb5qmdjs?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+        Open Trimurti Residency on Google Maps
+    </a>
+</div>
+ <img src="/static/images/map.jpg" alt="Description of image" width="1400" height="500">
+
+
+</div>
+{% endblock %}

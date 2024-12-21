@@ -1,0 +1,73 @@
+{% extends 'base.html'%}
+{% load static %}
+        {% block title %}
+aboutUs
+        {% endblock %}
+
+{% block x %}
+<div class="fs-2 text-center">About <b class="txt">Us
+        <i class=" fa-solid fa-address-card"></i></i></b>
+</div>
+<div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-5 img-thumbnail"style="margin: 0px 40px;">
+                <img  src="{% static 'images/donate2.jpg'%}" width="500px"/>
+        </div>
+        <div class="col-sm-5">
+                <h1>We<i class="fa-solid fa-hands-holding-child fs-5"></i><b class="txt">Help</b></h1>
+                <p style="color:green;">World NGO Day is celebrated on February 27 every year. It is an international day dedicated
+            to recognising, celebrating and honouring all non-governmental and nonprofit organisations, and the
+            people behind them that contribute to society all year round.</p>
+        </div>
+
+        <div class="col-sm-1"></div>
+</div>
+
+        <div class="row my-5 text-center" >
+                <h1><i class="fa-solid fa-handshake-angle"></i>Our<b class="txt"> Volunteers</b></h1>
+                <div class="col-sm-4 ">
+                   <div class=" sh card" style="width: ;">
+  <img src="{% static 'images/a.jpg'%}" class="card-img-top" alt="...">
+  <div class="card-body">
+<!--    <h5 class="card-title">Sports volunteering</h5>-->
+       <h4>Sports<b class="txt"> Volunteering</b></h4>
+    <p style="color:green;" class="card-text">You don't need to be good at the sport in which you wish to volunteer. Some of the most important attributes include enthusiasm and interest.
+
+Your sports organisation should put you through any qualifications that you need to carry out your role. Most people volunteer on average two or
+        three hours a week but there are also opportunities to volunteer more or less often.</p>
+<!--    <a href="#" class="btn btn-primary">Go somewhere</a>-->
+  </div>
+</div>
+           </div>
+                <div class="col-sm-4">
+                   <div class=" sh card" style="width: ;">
+  <img src="{% static 'images/donate1.jpg'%}" class="card-img-top" alt="...">
+  <div class="card-body">
+     <h4>Working with<b class="txt"> children</b></h4>
+    <p style="color:green;" class="card-text">“Most things are good, and they are the strongest things; but there are evil things too, and you are not doing
+        a child a favor by trying to shield him from reality. The important thing is to teach a child that good can always triumph over evil.If you want your children to be intelligent, read them fairy tales. If you want them to be more intelligent, read them more fairy tales.</p>
+<!--    <a href="#" class="btn btn-primary">Go somewhere</a>-->
+  </div>
+</div>
+           </div>
+                 <div class="col-sm-4">
+                   <div class=" sh card" style="width: ;">
+  <img src="{% static 'images/volunteer.jpg'%}" class="card-img-top" alt="...">
+  <div class="card-body">
+<!--    <h5 class="card-title">Community development.</h5>-->
+           <h4>Community<b class="txt"> development</b></h4><br>
+
+    <p style="color:green;" class="card-text">Community development is generally defined as social groups of people working together towards a common goal to build a stronger community.
+
+As a community development volunteer, you'll usually join a charity and give your time to disadvantaged communities to help distribute food,
+        shelter and clothing and provide education.</p>
+<!--    <a href="#" class="btn btn-primary">Go somewhere</a>-->
+  </div>
+</div>
+           </div>
+
+
+
+        </div>
+</div>
+{% endblock %}

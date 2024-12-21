@@ -1,0 +1,71 @@
+{% extends 'base.html'%}
+{% load static %}
+        {% block title %}
+memberShip
+        {% endblock %}
+
+{% block x %}
+<div class="fs-2 text-center">Join <b class="txt">Us
+       <i class="fa-solid fa-users"></i> </b>
+</div>
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+                <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light ">
+                    <i class="fa-solid fa-user"></i></i>
+                <input name="name" type="text" class="form-control " placeholder="name..."/>
+            </div>
+            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light ">
+                    <i class="fa-solid fa-envelope"></i></i>
+                <input name="email" type="" class="form-control " placeholder="email..."/>
+            </div>
+            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light ">
+                    <i class="fa-solid fa-message"></i></i>
+                <input name="pincode" type="number" class="form-control" placeholder="pincode..."/>
+            </div>
+                           <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light ">
+                    <i class="fa-solid fa-message"></i></i>
+                               <select name="city" required class="form-control" type="city">
+                                   {% for x in ct%}
+                               <option>{{x.ncity}}</option>
+                                   {% endfor %}
+                               </select>
+            </div>
+
+            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light ">
+                    <i class="fa-solid fa-message"></i></i>
+                <input name="acc" type="number" class="form-control" placeholder="bank account..."/>
+            </div>
+            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light ">
+                    <i class="fa-solid fa-message"></i></i>
+                <textarea name="caddress" type="text" class="form-control" placeholder="company address..."></textarea>
+            </div>
+            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light ">
+                    <i class="fa-solid fa-message"></i></i>
+                <textarea name="paddress" class="form-control" placeholder=" personal address..."></textarea>
+            </div>
+<input type="file" name="ppic" class="form-control">
+   <br> <input type="submit" value="Save" class="form-control bg-mycolor text-light  ">
+        </form>
+
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+        <br>
+                        <img  src="{% static 'images/img1.jpg'%}" width="500px"/>
+                        <img  src="{% static 'images/donate2.jpg'%}" width="500px"/>
+
+      </div>
+
+    </div>
+</div>
+{% endblock %}

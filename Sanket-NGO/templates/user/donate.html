@@ -1,0 +1,90 @@
+{% extends 'base.html'%}
+{% block title %}
+donate
+{% endblock %}
+{% load static %}
+
+{% block x %}
+<div class="fs-2 text-center">Donate <b class="txt">Us
+        <i class="fa-solid fa-hand-holding-heart"></i></b>
+</div>
+<div class="row">
+<div class="col-sm-1"></div>
+<div class="col-sm-5 pt-3 pb-3">
+    {% if m %}
+    <div class="alert alert-success">YOUR MESSAGE SENT SUCCESSFULLY</div>
+    <div class="alert alert-success">YOUR MESSAGE SENT SUCCESSFULLY</div>
+    {% endif %}
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light ">
+                    <i class="fa-solid fa-indian-rupee"></i></i>
+                <input name="avalue" type="number" class="form-control " placeholder="Amount value.."/>
+            </div>
+            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light ">
+                    <i class="fa-solid fa-user"></i></i>
+                <input name="fname" type="text" class="form-control " placeholder="First name.."/>
+            </div>
+                            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light ">
+                    <i class="fa-solid fa-user"></i></i>
+                <input name="lname" type="text" class="form-control " placeholder="Last name.."/>
+            </div>
+            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light ">
+                    <i class="fa-solid fa-envelope"></i></i>
+                <input name="email" type="email" class="form-control " placeholder="Email.."/>
+            </div>
+
+            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light ">
+                    <i class="fa-solid fa-phone"></i></i>
+                <input name="mob" type="number" class="form-control " placeholder="mob no..."/>
+            </div>
+                            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light ">
+                    <i class="fa-solid fa-globe"></i></i>
+                <input name="cont" type="text" class="form-control " placeholder="Country.."/>
+            </div>
+
+            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light ">
+                    <i class="fa-sharp fa-solid fa-location-dot"></i></i>
+                <textarea name="add" class="form-control" placeholder="address..."></textarea>
+            </div>
+                        <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light ">
+                    <i class="fa-solid fa-s"></i></i>
+                <input name="sta" type="text" class="form-control " placeholder="state"/>
+            </div>
+            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light ">
+                    <i class="fa-solid fa-check"></i></i>
+                <input name="pin" type="number" class="form-control " placeholder="pincode.."/>
+            </div>
+            <div class="input-group mb-3">
+                <i class="input-group-text bg-mycolor text-light ">
+                    <i class="fa-duotone fa-user-tie"></i></i>
+                <input name="occ" type="text" class="form-control " placeholder="Occupation.."/>
+            </div>
+<input type="file" name="ppic" class="form-control">
+
+   <br> <input type="submit" value="Save" class="form-control bg-mycolor text-light  ">
+        </form>
+
+</div>
+<div class="col-sm-5">
+<div class="row">
+    <div class="col-sm-12 text-center pt-3 pb-3">
+       <a href=""> <img src="{% static 'images/gpay.png' %}" height="80px" width="100px"  class="sh " alt=""></a>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="#"><img src="{% static 'images/paytm.png' %}" height="80px" width="100px"  class="sh" alt=""></a><br><br>
+
+        <a href="#"><img src="{% static 'images/qr.png' %}" height="380px" width="500px"  class="sh" alt=""></a>
+    </div>
+</div>
+</div>
+<div class="col-sm-1"></div>
+</div>
+{% endblock %}

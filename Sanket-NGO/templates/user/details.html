@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+{% block x %}
+<div class="fs-2 text-center">Video <b class="txt">Details
+    <i class="fa-solid fa-circle-video"></i></b></div>
+ <div class="row">
+   <div class="col-sm-2"></div>
+   <div class="col-sm-8">
+        {% for x in vdata %}
+            <div class="col-sm-3">
+                <div class="card">
+                    <iframe class="w-100 img-cart-top"  src="{{x.vlink}}" title="YouTube video player"
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5 class="card-title">{{x.vtitle}}</h5>
+                        <p class="card-title">{{x.vdes}}</p>
+
+                        <span class="btn btn-sm bg-mycolor"><i class="fa-solid fa-calendar-days"></i>{{x.vdate}}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+   </div>
+   <div class="col-sm-2"></div>
+
+{% endblock %}</div>

@@ -1,0 +1,176 @@
+{% extends 'base.html'%}
+{% load static %}
+        {% block title %}
+WeHelp
+        {% endblock %}
+
+{% block x %}
+    <div class="row slider">
+        <div class="col-sm-7 s1">
+    <!-- start slider -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="True">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'images/ngo.jpg'%}" class="d-block "  >
+            <div class="carousel-caption d-none d-md-block">
+              <h3 class="text-dark">WeHelp<i class="fa-solid fa-hands-holding-child fs-5"></i>NGO</h3>
+              <p  class="text-dark">Your <b>CONTRIBUTION</b> can be a <b>SOLUTION</b></p>
+            </div>
+          </div>
+<!--            loop-->
+            {% for a in res %}
+          <div class="carousel-item">
+            <img src="/{{a.spic}}" class="d-block "  >
+            <div class="carousel-caption d-none d-md-block">
+              <h5>{{a.shead}}</h5>
+              <p>{{a.ssubject}}</p>
+            </div>
+          </div>
+
+            {% endfor %}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    <!-- end slider -->
+        </div>
+            <div class="col-sm-5 s2">
+                <h2 class="text-center">Upcoming<b class="txt">Events</b></h2><br>
+
+                <!-- start card -->
+    <div class="card sh mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static 'images/img1.jpg'%}" class="img-fluid rounded-start" style="min-height: 110px;" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><a class="txt" href="https://www.townscript.com/in/india/charity">--Charity--</a></h5>
+              <p class="card-text">“Love is not patronizing and charity isn’t about pity, it is about love. Charity and love are the same—with
+                  charity you give love, so don’t just give money but reach out your hand instead..</p>
+              <p class="card-text"><small class="text-muted">Date<i class="fa-solid fa-calendar"></i> :23/12/2024</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card sh mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static 'images/to.jpg'%}" class="img-fluid rounded-start" style="min-height: 110px;" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><a href="#" class="txt">--Help Wanted--</a></h5>
+              <p class="card-text">“The life of a man consists not in seeing visions and dreaming dreams, but in active charity and in willing service.</p>
+              <p class="card-text"><small class="text-muted">Date<i class="fa-solid fa-calendar"></i> :23/12/2024</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- end card -->
+
+            </div>
+      </div>
+    <div class="row ncategory">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <h1 class="text-center">Our Promises To <b class="txt">Children</b> </h1>
+            <p class="text-center">We promise to improve the lives of the most vulnerable <br>children and strengtghen communities so that children can reach their  potential
+            we ensure that</p>
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-2">
+                    <div class="card cheight" style="width: ;">
+  <img src="{% static 'images/edu2.jpg'%}" class="card-img-top " alt="...">
+  <div class="card-body">
+    <p class="card-text">Children are Educated </p>
+  </div>
+</div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="card cheight" style="width: ;">
+  <img src="{% static 'images/edu1.jpg'%}" class="card-img-top " alt="...">
+  <div class="card-body">
+    <p class="card-text">Children are Healthy and well-nourshed</p>
+  </div>
+</div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="card cheight" style="width: ;">
+  <img src="{% static 'images/img2.jpg'%}" class="card-img-top " alt="...">
+  <div class="card-body">
+    <p class="card-text">Children are aware of their basic rights .</p>
+  </div>
+</div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="card cheight" style="width: ;">
+  <img src="{% static 'images/img3.jpg'%}" class="card-img-top " alt="...">
+  <div class="card-body">
+    <p class="card-text">Children participate in their own development .</p>
+  </div>
+</div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="card cheight" style="width: ;">
+  <img src="{% static 'images/edu3.jpg'%}" class="card-img-top " alt="...">
+  <div class="card-body">
+    <p class="card-text">Children are valued cared for </p>
+  </div>
+</div>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+
+            <div class="row my-3">
+                    <h2 class="text-center"> Our <b class=" txt"> Blog</b></h2>
+
+                {% for i in data %}
+                <div class="col-sm-4 my-3">
+                  <div class="card">
+                      <img src="/{{i.bpic}}" class="img-card-top w-100">
+<div class="card-body text-center">
+    <h5 class="card-body">{{i.bname}}</h5>
+    <a href="/user/bdetails?msg={{i.id}}" class="btn btn-sm fs-5">View more</a>
+    <p>{{i.bdes}}</p>
+    <i class="text-light btn-sm bg-mycolor">Date : {{i.bdate}}</i>
+</div>
+                  </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+<div class="row">
+    <div class="col-sm-1"></div>
+    <h2 class="text-center"> Our <b class=" txt">Gallery</b></h2>
+    <div class="col-sm-10">
+        {% for a in img %}
+        <img src="/{{a.gpic}}" height="200px" width="200px" class="my-5 mx-4 "/>
+        {% endfor%}
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+    <div class="row inews"></div>
+    <div class="row vnews"></div>
+{% endblock %}
